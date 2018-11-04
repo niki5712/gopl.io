@@ -2,12 +2,21 @@ f(3)
 f(2)
 f(1)
 defer 0
-error instead of panic: runtime error: integer divide by zero, 1, 0
 defer 1
-new error instead of new panic: runtime error: integer divide by zero, 1, 1
 defer 2
-new error instead of new panic: runtime error: integer divide by zero, 1, 2
 defer 3
-new error instead of new panic: runtime error: integer divide by zero, 1, 3
-2niki2
 !!!niki!!!
+panic: runtime error: integer divide by zero
+
+goroutine 1 [running]:
+main.f(0x0)
+	/home/niki/go/src/github.com/niki5712/gopl.io/ch5/defer2/defer.go:19 +0x173
+main.f(0x1)
+	/home/niki/go/src/github.com/niki5712/gopl.io/ch5/defer2/defer.go:20 +0x14e
+main.f(0x2)
+	/home/niki/go/src/github.com/niki5712/gopl.io/ch5/defer2/defer.go:20 +0x14e
+main.f(0x3)
+	/home/niki/go/src/github.com/niki5712/gopl.io/ch5/defer2/defer.go:20 +0x14e
+main.main()
+	/home/niki/go/src/github.com/niki5712/gopl.io/ch5/defer2/defer.go:9 +0x4a
+exit status 2
