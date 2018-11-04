@@ -1,0 +1,10 @@
+f(3)
+f(2)
+f(1)
+defer 0
+error instead of Exception: integer division or modulo by zero, 1, 0
+defer 1
+defer 2
+defer 3
+2niki2
+!!!niki!!!
