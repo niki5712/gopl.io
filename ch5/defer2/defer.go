@@ -19,6 +19,8 @@ func f(x int) {
 		i := 1
 		if p := recover(); p != nil {
 			fmt.Println(fmt.Errorf("error instead of panic: %v, %v, %v", p, i, x))
+		} else {
+			i = 0 / (i - 1)
 		}
 	}()
 	defer fmt.Printf("defer %d\n", x)

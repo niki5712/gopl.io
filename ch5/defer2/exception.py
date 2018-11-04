@@ -20,6 +20,8 @@ def f(x):
             i = 1
     except Exception as e:
         print(f"error instead of Exception: {e}, {i}, {x}")
+    else:
+        i = 0 // (i - 1)
 
 
 if __name__ == '__main__':

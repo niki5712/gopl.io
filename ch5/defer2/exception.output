@@ -5,6 +5,14 @@ defer 0
 error instead of Exception: integer division or modulo by zero, 1, 0
 defer 1
 defer 2
+error instead of Exception: integer division or modulo by zero, 1, 2
 defer 3
-2niki2
 !!!niki!!!
+Traceback (most recent call last):
+  File "exception.py", line 28, in <module>
+    main()
+  File "exception.py", line 3, in main
+    f(3)
+  File "exception.py", line 24, in f
+    i = 0 // (i - 1)
+ZeroDivisionError: integer division or modulo by zero
