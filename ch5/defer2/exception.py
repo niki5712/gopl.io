@@ -21,7 +21,10 @@ def f(x):
     except Exception as e:
         print(f"error instead of Exception: {e}, {i}, {x}")
     else:
-        i = 0 // (i - 1)
+        try:
+            i = 0 // (i - 1)
+        except Exception as e:
+            print(f"new error instead of new Exception: {e}, {i}, {x}")
 
 
 if __name__ == '__main__':

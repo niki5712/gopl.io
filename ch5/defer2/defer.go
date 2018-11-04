@@ -20,6 +20,11 @@ func f(x int) {
 		if p := recover(); p != nil {
 			fmt.Println(fmt.Errorf("error instead of panic: %v, %v, %v", p, i, x))
 		} else {
+			defer func() {
+				if p := recover(); p != nil {
+					fmt.Println(fmt.Errorf("new error instead of new panic: %v, %v, %v", p, i, x))
+				}
+			}()
 			i = 0 / (i - 1)
 		}
 	}()
