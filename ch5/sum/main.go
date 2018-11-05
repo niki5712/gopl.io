@@ -9,12 +9,13 @@ package main
 import "fmt"
 
 //!+
-func sum(vals ...int) int {
-	total := 0
+func sum(vals ...int) (total int) {
 	for _, val := range vals {
 		total += val
 	}
-	return total
+	// return
+	defer func() { recover() }()
+	panic(nil)
 }
 
 //!-
